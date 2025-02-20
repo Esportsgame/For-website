@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSBT E-Sports - Rules & Regulations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .rules-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .rules-content {
+            background: rgba(42, 25, 70, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .rules-content h1 {
+            color: var(--accent-purple);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .rules-section {
+            margin-bottom: 40px;
+        }
+
+        .rules-section h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rules-section h2::before {
+            content: "🎮";
+        }
+
+        .rules-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rules-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.6;
+        }
+
+        .rules-list li::before {
+            content: "✅";
+            flex-shrink: 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: var(--accent-purple);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: var(--accent-purple-light);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .rules-container {
+                margin: 80px auto;
+                padding: 10px;
+            }
+
+            .rules-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="lightning">⚡</span>
+            <span class="brand-name">CSBT E-Sports</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#leaderboard">Leaderboard</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="rules-container">
+        <div class="rules-content">
+            <h1>Rules & Regulations - CSBT Esports BGMI Tournament</h1>
+            
+            <p style="margin-bottom: 30px; text-align: center; color: var(--text-secondary);">
+                To ensure a fair and competitive environment, all players must follow these rules:
+            </p>
+
+            <div class="rules-section">
+                <h2>1. General Rules</h2>
+                <ul class="rules-list">
+                    <li>Players must register with their correct in-game name and ID.</li>
+                    <li>Only registered players are allowed to participate.</li>
+                    <li>Players must join the lobby on time; late entries will not be entertained.</li>
+                    <li>The use of emulators, hacks, scripts, or third-party software is strictly prohibited.</li>
+                </ul>
+            </div>
+
+            <div class="rules-section">
+                <h2>2. Match Rules</h2>
+                <ul class="rules-list">
+                    <li>Players must play on the official BGMI app.</li>
+                    <li>Teaming, hacking, or cheating will lead to immediate disqualification.</li>
+                    <li>Intentional disconnections will not be considered for rematches.</li>
+                    <li>If a match is interrupted due to server issues, it will be rescheduled.</li>
+                </ul>
+            </div>
+
+            <div class="rules-section">
+                <h2>3. Scoring & Ranking</h2>
+                <ul class="rules-list">
+                    <li>The tournament will follow a points-based ranking system.</li>
+                    <li>Kill points & placement points will determine the final ranking.</li>
+                    <li>The MVP Award goes to the player with the most kills in the final match.</li>
+                    <li>The Kill Leader is the player with the highest kills throughout the tournament.</li>
+                    <li>The Player of the Season is awarded based on overall performance.</li>
+                </ul>
+            </div>
+
+            <div class="rules-section">
+                <h2>4. Conduct & Fair Play</h2>
+                <ul class="rules-list">
+                    <li>Players must maintain sportsmanship and respect towards opponents and organizers.</li>
+                    <li>Toxic behavior, abusive language, or harassment will result in a ban.</li>
+                    <li>Any attempt to manipulate results (e.g., teaming) will lead to disqualification.</li>
+                </ul>
+            </div>
+
+            <div class="rules-section">
+                <h2>5. Streaming & Content</h2>
+                <ul class="rules-list">
+                    <li>Players must seek permission before streaming tournament matches.</li>
+                    <li>Organizers hold the right to stream, record, and use gameplay content for promotional purposes.</li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 40px; text-align: center; color: #ffd700; font-weight: bold;">
+                Failure to follow these rules may result in warnings, disqualifications, or bans. Play fair and let the best player win!
+            </p>
+
+            <a href="registration.html" class="back-btn">Back to Registration</a>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,461 @@
+.registration-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.registration-form {
+    background: rgba(42, 25, 70, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h2 {
+    color: var(--accent-purple);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.form-section {
+    margin-bottom: 40px;
+}
+
+.form-section h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.phone-input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: 5px;
+    color: var(--text-primary);
+}
+
+.form-group input:focus,
+.phone-input:focus-within {
+    border-color: var(--accent-purple);
+    outline: none;
+}
+
+.player-section {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.player-section h4 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.terms {
+    display: none;
+}
+
+.submit-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: #ffd700;
+    color: var(--primary-bg);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.submit-btn:hover {
+    background-color: #ffed4a;
+    transform: translateY(-2px);
+}
+
+.form-note {
+    color: #ff4444;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-btn:disabled:hover {
+    background-color: #cccccc;
+    transform: none;
+}
+
+.form-group label.required {
+    font-weight: 500;
+}
+
+.form-group input.invalid,
+.phone-input.invalid {
+    border-color: #ff4444;
+}
+
+.form-group input.valid,
+.phone-input.valid {
+    border-color: #4CAF50;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+    padding-left: 2px;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-purple);
+    border-radius: 5px;
+}
+
+.country-code {
+    padding: 10px;
+    color: var(--text-secondary);
+    border-right: 1px solid var(--accent-purple);
+}
+
+.phone-input input {
+    border: none;
+    background: none;
+    flex: 1;
+}
+
+.phone-input input:focus {
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .registration-container {
+        margin: 80px auto;
+        padding: 10px;
+    }
+
+    .registration-form {
+        padding: 20px;
+    }
+}
+
+/* Add these styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: rgba(42, 25, 70, 0.95);
+    margin: 50px auto;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 15px;
+    position: relative;
+    animation: modalSlide 0.3s ease-out;
+}
+
+@keyframes modalSlide {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.modal-header h2 {
+    color: var(--accent-purple);
+    margin: 0;
+    padding-right: 30px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--text-secondary);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.terms-list {
+    list-style: none;
+    counter-reset: terms-counter;
+    margin: 0;
+    padding: 0;
+}
+
+.terms-list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+    padding-left: 50px;
+    line-height: 1.6;
+}
+
+.terms-list li::before {
+    counter-increment: terms-counter;
+    content: counter(terms-counter);
+    position: absolute;
+    left: 15px;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.terms-list li strong {
+    color: #ffd700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20px auto;
+        width: 95%;
+    }
+}
+
+/* Add these styles for rules modal */
+.rules-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.rules-section {
+    margin-bottom: 30px;
+}
+
+.rules-section h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.rules-section .rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-section .rules-list li {
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.rules-section .rules-list li::before {
+    content: "✅";
+    flex-shrink: 0;
+}
+
+.rules-footer {
+    text-align: center;
+    color: #ff4444;  /* Dark red color */
+    font-weight: bold;
+    margin-top: 40px;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Update agreement styles */
+.agreement-box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 5px 0;
+}
+
+.checkbox-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: default;
+    accent-color: #ff4444;
+}
+
+.checkbox-wrapper label {
+    color: white !important;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin: 0;
+    line-height: 1.4;
+    user-select: none;
+}
+
+.checkbox-wrapper a {
+    color: var(--accent-purple);
+    text-decoration: none;
+    display: inline;
+}
+
+.checkbox-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Add this for required asterisk */
+.checkbox-wrapper label.required::after {
+    content: " *";
+    color: #ff4444;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked {
+    border-color: #ff4444;
+    background-color: #ff4444;
+}
+
+.checkbox-wrapper input[type="checkbox"]:disabled {
+    opacity: 1;
+    cursor: default;
+    border-color: #ff4444;
+}
+
+.payment-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.upi-details {
+    background: rgba(139, 92, 246, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.payment-steps {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.payment-steps ol {
+    padding-left: 20px;
+}
+
+.payment-steps li {
+    margin: 10px 0;
+    color: var(--text-secondary);
+}
+
+.important-note {
+    background: rgba(255, 68, 68, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.important-note p {
+    color: #ff4444;
+    margin: 0;
+}
+
+.utr-input-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 8px;
+}
+
+.utr-input-section label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.utr-input-section input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 0 auto 10px;
+    border: 1px solid var(--accent-purple);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.verify-btn {
+    background: var(--accent-purple);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.verify-btn:hover {
+    background: var(--accent-purple-light);
+    transform: translateY(-2px);
+} 

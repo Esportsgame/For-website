@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSBT E-Sports - Terms & Conditions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .terms-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .terms-content {
+            background: rgba(42, 25, 70, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .terms-content h1 {
+            color: var(--accent-purple);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .terms-list {
+            list-style: none;
+            counter-reset: terms-counter;
+        }
+
+        .terms-list li {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 50px;
+            line-height: 1.6;
+        }
+
+        .terms-list li::before {
+            counter-increment: terms-counter;
+            content: counter(terms-counter);
+            position: absolute;
+            left: 15px;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .terms-list li strong {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: var(--accent-purple);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: var(--accent-purple-light);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .terms-container {
+                margin: 80px auto;
+                padding: 10px;
+            }
+
+            .terms-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="lightning">⚡</span>
+            <span class="brand-name">CSBT E-Sports</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#leaderboard">Leaderboard</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="terms-container">
+        <div class="terms-content">
+            <h1>Terms & Conditions for Payment</h1>
+            
+            <ol class="terms-list">
+                <li>
+                    <strong>Non-Refundable Payment</strong>
+                    The registration fee is non-refundable under any circumstances, including disqualification, absence, or withdrawal from the tournament.
+                </li>
+                
+                <li>
+                    <strong>Correct Payment Details</strong>
+                    Players must ensure they enter the correct payment details and transaction ID while registering. Any incorrect details may result in disqualification.
+                </li>
+                
+                <li>
+                    <strong>Payment Confirmation</strong>
+                    Once the payment is successfully made, players will receive a confirmation message or email. If not received within 24 hours, players must contact support with proof of payment.
+                </li>
+                
+                <li>
+                    <strong>No Transfers</strong>
+                    Registration fees cannot be transferred to another tournament, player, or event.
+                </li>
+                
+                <li>
+                    <strong>Fraudulent Transactions</strong>
+                    Any fraudulent or unauthorized transactions will lead to immediate disqualification and potential legal action.
+                </li>
+                
+                <li>
+                    <strong>Tournament Cancellation</strong>
+                    In case of event cancellation by CSBT Esports, players will be eligible for a full refund, which will be processed within 7-10 working days.
+                </li>
+                
+                <li>
+                    <strong>Payment Deadline</strong>
+                    Registration fees must be paid before the deadline. Late payments will not be accepted, and entry will be denied.
+                </li>
+                
+                <li>
+                    <strong>Receipt of Payment</strong>
+                    Players must keep a screenshot or proof of payment until the tournament begins, as it may be required for verification.
+                </li>
+            </ol>
+
+            <a href="registration.html" class="back-btn">Back to Registration</a>
+        </div>
+    </div>
+</body>
+</html> 

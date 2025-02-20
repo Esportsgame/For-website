@@ -1,0 +1,1395 @@
+:root {
+    --primary-bg: #1a1a1a;
+    --secondary-bg: #2d2d2d;
+    --accent-purple: #8b5cf6;
+    --accent-purple-light: #a78bfa;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: rgba(42, 25, 70, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lightning {
+    color: var(--accent-purple);
+    font-size: 1.5rem;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-purple);
+}
+
+.nav-links .active {
+    color: var(--accent-purple);
+    font-weight: 500;
+}
+
+.contact-btn {
+    background-color: white;
+    color: var(--primary-bg);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--accent-purple);
+    color: white;
+}
+
+.hero {
+    height: 90vh;
+    padding-top: 120px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('./BGMI.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.victory-text {
+    color: #ffd700 !important;
+    font-size: 1.8rem !important;
+    margin: 1rem 0 !important;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .victory-text {
+        font-size: 1.4rem !important;
+    }
+}
+
+.get-started-btn {
+    background-color: var(--accent-purple);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: var(--accent-purple-light);
+    transform: translateY(-2px);
+}
+
+.tournament-section {
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('./BGMI.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tournament-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(42, 25, 70, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.game-image {
+    width: 40%;
+    overflow: hidden;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-image img:hover {
+    transform: scale(1.05);
+}
+
+.tournament-details {
+    width: 60%;
+    padding: 30px;
+}
+
+.tournament-details h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.prize-pool {
+    margin-bottom: 20px;
+}
+
+.prize-amount {
+    font-size: 2.5rem;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.tournament-info {
+    margin-bottom: 30px;
+}
+
+.tournament-info p {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.register-btn {
+    background-color: #ffd700;
+    color: var(--primary-bg);
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.register-btn:hover {
+    background-color: #ffed4a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.register-btn a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.get-started-btn a, .register-btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .tournament-card {
+        flex-direction: column;
+    }
+    
+    .game-image, .tournament-details {
+        width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .hero {
+        padding-top: 100px;
+    }
+}
+
+/* Why Join Section Styles */
+.why-join-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('./BGMI.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.section-title {
+    text-align: center;
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.benefit-card {
+    background: rgba(42, 25, 70, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-purple);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    color: var(--accent-purple);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .benefit-card {
+        padding: 20px;
+    }
+}
+
+/* Tournament Info Section Styles */
+.tournament-info-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+.info-video-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.video-container {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.video-wrapper:hover iframe {
+    border-color: var(--accent-purple);
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(rgba(42, 25, 70, 0.95), rgba(42, 25, 70, 0.95));
+    padding: 60px 0 20px;
+    color: var(--text-secondary);
+    border-top: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    padding: 0 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--accent-purple);
+}
+
+.footer-section h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links, .contact-info {
+    list-style: none;
+}
+
+.footer-links li, .contact-info li {
+    margin-bottom: 12px;
+}
+
+.footer-links a, .contact-info a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .contact-info a:hover {
+    color: var(--accent-purple);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--accent-purple);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background: var(--accent-purple);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: var(--accent-purple-light);
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+    margin-top: 10px;
+}
+
+.footer-bottom-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--accent-purple);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+.hero-social {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hero-social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-social-link:hover {
+    background: rgba(139, 92, 246, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(139, 92, 246, 0.3);
+}
+
+.hero-social-link i {
+    font-size: 1.5rem;
+}
+
+.hero-social-link i.fa-instagram {
+    color: #E1306C;
+}
+
+.hero-social-link i.fa-youtube {
+    color: #FF0000;
+}
+
+.hero-social-link span {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-social-link {
+        padding: 0.6rem 1rem;
+    }
+    
+    .hero-social-link i {
+        font-size: 1.2rem;
+    }
+    
+    .hero-social-link span {
+        font-size: 0.9rem;
+    }
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Remove these styles */
+.hero-image {
+    margin-top: 2rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-width: 200px;
+    }
+}
+
+.cod-announcement {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background: #4a3f35;
+    border-radius: 20px;
+    padding: 15px;
+    max-width: 350px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cod-announcement::after {
+    content: 'ANNOUNCED';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cod-announcement:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cod-announcement img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.cod-announcement:hover img {
+    transform: scale(0.95);
+}
+
+/* मोबाइल व्यू */
+@media (max-width: 768px) {
+    .cod-announcement {
+        max-width: 280px;
+        height: 200px;
+        padding: 12px;
+    }
+}
+
+/* Leaderboard Section Styles */
+.leaderboard-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+                url('./BGMI.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.leaderboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(42, 25, 70, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.leaderboard-header {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leaderboard-row {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.leaderboard-row:hover {
+    background: rgba(139, 92, 246, 0.1);
+    transform: translateX(10px);
+}
+
+.rank {
+    font-weight: bold;
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.crown {
+    font-size: 1.2rem;
+}
+
+.team-name {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.kills, .points {
+    color: var(--accent-purple-light);
+}
+
+.matches {
+    color: var(--text-secondary);
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .leaderboard-container {
+        margin: 0 20px;
+    }
+
+    .leaderboard-header, .leaderboard-row {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
+
+.leaderboard-message {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.leaderboard-message .trophy-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.leaderboard-message p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .leaderboard-message {
+        padding: 15px;
+    }
+    
+    .leaderboard-message p {
+        font-size: 0.85rem;
+    }
+}
+
+.about-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('./BGMI.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(42, 25, 70, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.about-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.highlight {
+    font-size: 1.3rem;
+    color: var(--accent-purple);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.mission-box {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    border-left: 4px solid #ffd700;
+}
+
+.mission-box h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.feature {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.feature h4 {
+    color: var(--accent-purple-light);
+    margin-bottom: 10px;
+}
+
+.join-box {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.join-box h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.join-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--accent-purple);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+    background: var(--accent-purple-light);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight {
+        font-size: 1.1rem;
+    }
+}
+
+/* Add these new styles */
+.leaderboard-page, .about-page {
+    padding-top: 100px;  /* Space for fixed navbar */
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('./BGMI.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.page-title {
+    text-align: center;
+    color: #ffd700;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Tournament Rules Styles */
+.tournament-rules {
+    margin-top: 60px;
+    padding: 30px;
+    background: rgba(42, 25, 70, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.tournament-rules h2 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.rule-card {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-purple);
+}
+
+.rule-card h3 {
+    color: var(--accent-purple-light);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.rule-card ul {
+    list-style: none;
+}
+
+.rule-card ul li {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.rule-card ul li:before {
+    content: "•";
+    color: var(--accent-purple);
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .tournament-rules {
+        margin-top: 40px;
+        padding: 20px;
+    }
+    
+    .rules-grid {
+        gap: 20px;
+    }
+}
+
+/* Team Section Styles */
+.team-section {
+    margin-top: 60px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.team-section h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.team-section > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.value-item h4 {
+    color: var(--accent-purple-light);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.value-item p {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .team-section {
+        margin-top: 40px;
+        padding: 20px;
+    }
+    
+    .team-values {
+        gap: 20px;
+    }
+}
+
+/* Blog Styles */
+.blog-page {
+    padding-top: 100px;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('./BGMI.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.blog-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(42, 25, 70, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.blog-post {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.post-header {
+    margin-bottom: 30px;
+}
+
+.post-header h2 {
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.post-meta span {
+    margin-right: 20px;
+}
+
+.post-image {
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+}
+
+.post-intro {
+    font-size: 1.2rem;
+    color: var(--accent-purple-light);
+    margin-bottom: 30px;
+}
+
+.post-content h3 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin: 30px 0 15px;
+}
+
+.blog-list {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.blog-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.blog-list li:before {
+    content: "•";
+    color: var(--accent-purple);
+    position: absolute;
+    left: 0;
+}
+
+.post-conclusion {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-purple);
+}
+
+.post-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--accent-purple);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--accent-purple-light);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .blog-content {
+        padding: 20px;
+    }
+    
+    .post-header h2 {
+        font-size: 2rem;
+    }
+    
+    .post-intro {
+        font-size: 1.1rem;
+    }
+}
+
+.prize-distribution {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.prize-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prize-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.position {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.amount {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.tournament-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.detail-card {
+    background: rgba(42, 25, 70, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card .game-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.game-card .game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-specs {
+    margin-top: 15px;
+}
+
+.game-specs p {
+    margin: 10px 0;
+    color: var(--text-secondary);
+}
+
+.game-specs i {
+    margin-right: 10px;
+    color: var(--accent-purple);
+}
+
+.prize-card {
+    padding: 20px;
+}
+
+.total-prize {
+    font-size: 2rem;
+    color: #ffd700;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.register-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.registration-points {
+    list-style: none;
+    margin: 20px 0;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.registration-points li {
+    margin: 10px 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 25px;
+}
+
+.registration-points li:before {
+    content: "✓";
+    color: var(--accent-purple);
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .tournament-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add this new CSS */
+@media (min-width: 992px) {
+    .tournament-details-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .register-card {
+        grid-column: 2;  /* Place in center column */
+        grid-row: 1;     /* Place in first row */
+    }
+    
+    .game-card {
+        grid-column: 1;  /* Place in first column */
+    }
+    
+    .prize-card {
+        grid-column: 3;  /* Place in last column */
+    }
+} 
